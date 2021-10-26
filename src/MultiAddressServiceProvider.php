@@ -19,7 +19,7 @@ class MultiAddressServiceProvider extends PackageServiceProvider
             ->name('laravel-multi-address')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_laravel-multi-address_table')
+            ->hasMigration('create_multi-address_table')
             ->hasCommand(MultiAddressCommand::class);
     }
 }
