@@ -19,8 +19,8 @@ class MultiAddress extends Model
     ];
 
     protected $fillable = [
-        'transportaddresseable_id',
-        'transportaddresseable_type',
+        'multiaddresseable_id',
+        'multiaddresseable_type',
         'country',
         'county',
         'zip',
@@ -34,5 +34,32 @@ class MultiAddress extends Model
     public function multiaddresseable()
     {
         return $this->morphTo();
+    }
+
+    public function createMultiAddress(Model $addresseable, $data, Model $model)
+    {
+        $rating = new static();
+        $rating->fill(array_merge($data, [
+            'multiaddresseable_id' => $model->id,
+            'multiaddresseable_type' => get_class($model),
+        ]));
+
+        $addresseable->multiaddresses()->save($rating);
+
+        return $rating;
+    }
+
+    /**
+     * @param $id
+     * @param $data
+     *
+     * @return mixed
+     */
+    public function updateMultiAddress($id, $data)
+    {
+        $rating = static::find($id);
+        $rating->update($data);
+
+        return $rating;
     }
 }

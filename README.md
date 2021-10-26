@@ -29,16 +29,48 @@ php artisan vendor:publish --provider="zoparga\MultiAddress\MultiAddressServiceP
 
 This is the contents of the published config file:
 
-```php
-return [
-];
-```
-
 ## Usage
 
+- publish migration file
+- migrate
+- add trait to model
+- use it
+
+## Prepare model
+
+
+use zoparga\MultiAddress\Traits\MultiAddresseableTrait;
+
+class {{model}} extends Model
+{
+    use MultiAddresseableTrait;
+}
+
 ```php
-$laravel-multi-address = new zoparga\MultiAddress();
-echo $laravel-multi-address->echoPhrase('Hello, zoparga!');
+
+$model = \App\Models\Model::find(1);
+
+$model->createMultiAddress([
+        'country' => 'YOUR VALUE',
+        'county' => 'YOUR VALUE',
+        'zip' => 'YOUR VALUE',
+        'city' => 'YOUR VALUE',
+        'street' => 'YOUR VALUE',
+        'address_longitude' => 'YOUR VALUE',
+        'address_latitude' => 'YOUR VALUE',
+]);
+
+
+$model->updateMultiAddress(1, [
+        'country' => 'YOUR VALUE',
+        'county' => 'YOUR VALUE',
+        'zip' => 'YOUR VALUE',
+        'city' => 'YOUR VALUE',
+        'street' => 'YOUR VALUE',
+        'address_longitude' => 'YOUR VALUE',
+        'address_latitude' => 'YOUR VALUE',
+]);
+
 ```
 
 ## Testing
