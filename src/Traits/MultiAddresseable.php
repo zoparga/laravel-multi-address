@@ -2,7 +2,6 @@
 
 namespace zoparga\MultiAddress\Traits;
 
-use Illuminate\Database\Eloquent\Model;
 use zoparga\MultiAddress\MultiAddress;
 
 trait MultiAddresseable

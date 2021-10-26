@@ -14,7 +14,7 @@ class MultiAddress extends Model
     protected $dates = [
         'created_at',
         'updated_at',
-        'deleted_at'
+        'deleted_at',
 
     ];
 
@@ -30,7 +30,6 @@ class MultiAddress extends Model
         'address_latitude',
 
     ];
-
 
     public function multiaddresseable()
     {
