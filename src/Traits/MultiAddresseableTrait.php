@@ -4,7 +4,7 @@ namespace zoparga\MultiAddress\Traits;
 
 use zoparga\MultiAddress\MultiAddress;
 
-trait MultiAddresseable
+trait MultiAddresseableTrait
 {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany

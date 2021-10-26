@@ -16,7 +16,7 @@ class MultiAddressServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-multi-address')
+            ->name('multi-address')
             ->hasConfigFile()
             ->hasViews()
             ->hasMigration('create_multi-address_table')

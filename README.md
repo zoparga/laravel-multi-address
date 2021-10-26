@@ -18,7 +18,7 @@ composer require zoparga/laravel-multi-address
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="zoparga\MultiAddress\MultiAddressServiceProvider" --tag="laravel-multi-address-migrations"
+php artisan vendor:publish --provider="zoparga\MultiAddress\MultiAddressServiceProvider" --tag="multi-address-migrations"
 php artisan migrate
 ```
 
