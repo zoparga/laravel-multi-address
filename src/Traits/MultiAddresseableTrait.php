@@ -15,6 +15,17 @@ trait MultiAddresseableTrait
         return $this->morphMany(MultiAddress::class, 'multiaddresseable');
     }
 
+    public function getLatestMultiAddresses()
+    {
+        return $this->morphMany(MultiAddress::class, 'multiaddresseable')->orderBy('id', 'desc');
+    }
+
+
+    public function getLastMultiAddress()
+    {
+        return $this->morphMany(MultiAddress::class, 'multiaddresseable')->orderBy('id', 'desc')->first();
+    }
+
     /**
      * @param $data
      * @param $author
