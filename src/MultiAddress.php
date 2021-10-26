@@ -36,27 +36,27 @@ class MultiAddress extends Model
         return $this->morphTo();
     }
 
-    public function createMultiAddress(Model $addresseable, $data)
-    {
-        $address = new static();
-        $address->fill($data);
+    // public function createMultiAddress(Model $addresseable, $data)
+    // {
+    //     $address = new static();
+    //     $address->fill($data);
 
-        $addresseable->multiaddresses()->save($data);
+    //     $addresseable->multiaddresses()->save($data);
 
-        return $address;
-    }
+    //     return $address;
+    // }
 
-    /**
-     * @param $id
-     * @param $data
-     *
-     * @return mixed
-     */
+    // /**
+    //  * @param $id
+    //  * @param $data
+    //  *
+    //  * @return mixed
+    //  */
     public function updateMultiAddress($id, $data)
     {
-        $rating = static::find($id);
-        $rating->update($data);
+        $multiAddress = static::find($id);
+        $multiAddress->update($data);
 
-        return $rating;
+        return $multiAddress;
     }
 }

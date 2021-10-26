@@ -50,7 +50,7 @@ class {{model}} extends Model
 
 $model = \App\Models\Model::find(1);
 
-$model->createMultiAddress([
+$model->multiaddresses()->create([
         'country' => 'YOUR VALUE',
         'county' => 'YOUR VALUE',
         'zip' => 'YOUR VALUE',
@@ -60,8 +60,9 @@ $model->createMultiAddress([
         'address_latitude' => 'YOUR VALUE',
 ]);
 
+$multiAddressId = 1;
 
-$model->updateMultiAddress(1, [
+$model->updateMultiAddress($multiAddressId, [
         'country' => 'YOUR VALUE',
         'county' => 'YOUR VALUE',
         'zip' => 'YOUR VALUE',
