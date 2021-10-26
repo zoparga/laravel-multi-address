@@ -72,6 +72,17 @@ $model->updateMultiAddress($multiAddressId, [
         'address_latitude' => 'YOUR VALUE',
 ]);
 
+Get the addresses, order by ID - desc
+Or you can limit it here
+$model->getLatestMultiAddresses()->get();
+
+Or you can limit it here
+$model->getLatestMultiAddresses()->limit(3)->get();
+
+Of course you can get last created address
+$model->getLastMultiAddress();
+
+
 ```
 
 ## Testing
