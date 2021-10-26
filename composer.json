@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "zoparga/laravel-multi-address",
+    "description": "Add many address to many model with a single trait. E.g.: many shipping address for a customer.",
     "keywords": [
-        ":vendor_name",
+        "zoparga",
         "laravel",
-        ":package_slug"
+        "laravel-multi-address"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/zoparga/laravel-multi-address",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Papp Zoltán",
+            "email": "zoltan@pappz.hu",
             "role": "Developer"
         }
     ],
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "zoparga\\MultiAddress\\": "src",
+            "zoparga\\MultiAddress\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "zoparga\\MultiAddress\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,10 +49,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "zoparga\\MultiAddress\\MultiAddressServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "MultiAddress": "zoparga\\MultiAddress\\MultiAddressFacade"
             }
         }
     },
