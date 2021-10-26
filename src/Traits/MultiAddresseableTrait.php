@@ -22,9 +22,9 @@ trait MultiAddresseableTrait
      *
      * @return mixed
      */
-    public function createMultiAddress($data, Model $addresseable, Model $parent = null)
+    public function createMultiAddress($data)
     {
-        return (new MultiAddress())->createMultiAddress($this, $data, $addresseable);
+        return (new MultiAddress())->createMultiAddress($this, $data);
     }
 
     /**
