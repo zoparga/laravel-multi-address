@@ -38,15 +38,12 @@ class MultiAddress extends Model
 
     public function createMultiAddress(Model $addresseable, $data)
     {
-        $rating = new static();
-        // $rating->fill(array_merge($data, [
-        //     'multiaddresseable_id' => $model->id,
-        //     'multiaddresseable_type' => get_class($model),
-        // ]));
+        $address = new static();
+        $address->fill($data);
 
         $addresseable->multiaddresses()->save($data);
 
-        return $rating;
+        return $address;
     }
 
     /**
