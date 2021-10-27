@@ -51,8 +51,8 @@ class {{model}} extends Model
 $model = \App\Models\Model::find(1);
 
 $model->multiaddresses()->create([
+        'type' => 'YOUR VALUE',
         'country' => 'YOUR VALUE',
-        'county' => 'YOUR VALUE',
         'zip' => 'YOUR VALUE',
         'city' => 'YOUR VALUE',
         'street' => 'YOUR VALUE',
@@ -63,8 +63,8 @@ $model->multiaddresses()->create([
 $multiAddressId = 1;
 
 $model->updateMultiAddress($multiAddressId, [
+        'type' => 'YOUR VALUE',
         'country' => 'YOUR VALUE',
-        'county' => 'YOUR VALUE',
         'zip' => 'YOUR VALUE',
         'city' => 'YOUR VALUE',
         'street' => 'YOUR VALUE',

@@ -15,13 +15,13 @@ class ModelFactory extends Factory
         return [
             'multiaddresseable_id' => 1,
             'multiaddresseable_type' => 'App\Models\User',
-            'country' => 'TEST',
-            'county' => 'TEST',
-            'zip' => 'TEST',
-            'city' => 'TEST',
-            'street' => 'TEST',
-            'address_longitude' => 'TEST',
-            'address_latitude' => 'TEST',
+            'type' => 'main address',
+            'country' => 'Hungary',
+            'zip' => '1010',
+            'city' => 'Budapest',
+            'street' => 'Fő utca 1.',
+            'address_longitude' => '40.0000',
+            'address_latitude' => '40.0000',
         ];
     }
 }

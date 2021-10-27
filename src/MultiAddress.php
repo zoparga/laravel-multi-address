@@ -21,8 +21,8 @@ class MultiAddress extends Model
     protected $fillable = [
         'multiaddresseable_id',
         'multiaddresseable_type',
+        'type',
         'country',
-        'county',
         'zip',
         'city',
         'street',

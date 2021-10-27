@@ -14,8 +14,8 @@ return new class extends Migration
             $table->unsignedBigInteger('multiaddresseable_id');
             $table->string('multiaddresseable_type');
 
+            $table->string('type')->nullable();
             $table->string('country')->nullable();
-            $table->string('county')->nullable();
             $table->string('zip')->nullable();
             $table->string('city')->nullable();
             $table->string('street')->nullable();
